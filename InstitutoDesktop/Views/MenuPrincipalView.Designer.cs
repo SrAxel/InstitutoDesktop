@@ -35,6 +35,7 @@
             iconDocente = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem3 = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem4 = new FontAwesome.Sharp.IconMenuItem();
+            btnAlumnos = new FontAwesome.Sharp.IconMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,7 +62,11 @@
             // 
             // iconMenuItem2
             // 
+
+            iconMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { iconMenuItem5, btnAlumnos });
+
             iconMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { iconMenuItem5, iconDocente });
+
             iconMenuItem2.IconChar = FontAwesome.Sharp.IconChar.Database;
             iconMenuItem2.IconColor = Color.Black;
             iconMenuItem2.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -109,6 +114,16 @@
             iconMenuItem4.Text = "Salir del sistema";
             iconMenuItem4.Click += iconMenuItem4_Click;
             // 
+            // btnAlumnos
+            // 
+            btnAlumnos.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
+            btnAlumnos.IconColor = Color.Black;
+            btnAlumnos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnAlumnos.Name = "btnAlumnos";
+            btnAlumnos.Size = new Size(228, 30);
+            btnAlumnos.Text = "Alumnos";
+            btnAlumnos.Click += btnAlumnos_Click;
+            // 
             // MenuPrincipalView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -134,6 +149,10 @@
         private FontAwesome.Sharp.IconMenuItem iconMenuItem5;
         private FontAwesome.Sharp.IconMenuItem iconMenuItem3;
         private FontAwesome.Sharp.IconMenuItem iconMenuItem4;
+
+        private FontAwesome.Sharp.IconMenuItem btnAlumnos;
+
         private FontAwesome.Sharp.IconMenuItem iconDocente;
+
     }
 }
