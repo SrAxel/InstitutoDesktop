@@ -1,6 +1,11 @@
 using InstitutoDesktop.Views;
 using InstitutoDesktop.Views.Inscripciones;
 
+using InstitutoDesktop.Views.Commons.Alumnos;
+
+using InstitutoDesktop.Views.Commons;
+
+
 namespace InstitutoDesktop
 {
     public partial class MenuPrincipalView : Form
@@ -23,10 +28,23 @@ namespace InstitutoDesktop
             Application.Exit();
         }
 
+
         private void iconMenuItem6_Click(object sender, EventArgs e)
         {
             CiclosLectivosView ciclosLectivosView= new CiclosLectivosView();
             ciclosLectivosView.ShowDialog();
+        }
+
+        private void btnAlumnos_Click(object sender, EventArgs e)
+        {
+            AlumnosView alumnosView = new AlumnosView();
+            alumnosView.ShowDialog();
+         }
+        private void iconDocente_Click(object sender, EventArgs e)
+        {
+            DocentesView docentesView = new DocentesView();
+            docentesView.ShowDialog();
+
         }
     }
 }
