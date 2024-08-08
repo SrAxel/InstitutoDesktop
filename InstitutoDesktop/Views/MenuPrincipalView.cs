@@ -1,4 +1,5 @@
 using InstitutoDesktop.Views;
+using InstitutoDesktop.Views.Inscripciones;
 
 using InstitutoDesktop.Views.Commons.Alumnos;
 
@@ -28,6 +29,12 @@ namespace InstitutoDesktop
         }
 
 
+        private void iconMenuItem6_Click(object sender, EventArgs e)
+        {
+            CiclosLectivosView ciclosLectivosView= new CiclosLectivosView();
+            ciclosLectivosView.ShowDialog();
+        }
+
         private void btnAlumnos_Click(object sender, EventArgs e)
         {
             AlumnosView alumnosView = new AlumnosView();
@@ -37,6 +44,7 @@ namespace InstitutoDesktop
         {
             DocentesView docentesView = new DocentesView();
             docentesView.ShowDialog();
+
         }
     }
 }

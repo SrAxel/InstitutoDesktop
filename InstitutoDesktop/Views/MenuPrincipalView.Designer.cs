@@ -32,7 +32,11 @@
             iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem2 = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem5 = new FontAwesome.Sharp.IconMenuItem();
+
+            iconMenuItem6 = new FontAwesome.Sharp.IconMenuItem();
+
             iconDocente = new FontAwesome.Sharp.IconMenuItem();
+
             iconMenuItem3 = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem4 = new FontAwesome.Sharp.IconMenuItem();
             btnAlumnos = new FontAwesome.Sharp.IconMenuItem();
@@ -63,9 +67,13 @@
             // iconMenuItem2
             // 
 
+            iconMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { iconMenuItem5, iconMenuItem6 });
+
+
             iconMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { iconMenuItem5, btnAlumnos });
 
             iconMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { iconMenuItem5, iconDocente });
+
 
             iconMenuItem2.IconChar = FontAwesome.Sharp.IconChar.Database;
             iconMenuItem2.IconColor = Color.Black;
@@ -84,6 +92,17 @@
             iconMenuItem5.Text = "Carreras";
             iconMenuItem5.Click += iconMenuItem5_Click;
             // 
+
+            // iconMenuItem6
+            // 
+            iconMenuItem6.IconChar = FontAwesome.Sharp.IconChar.None;
+            iconMenuItem6.IconColor = Color.Black;
+            iconMenuItem6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconMenuItem6.Name = "iconMenuItem6";
+            iconMenuItem6.Size = new Size(228, 30);
+            iconMenuItem6.Text = "Ciclo Lectivo";
+            iconMenuItem6.Click += iconMenuItem6_Click;
+
             // iconDocente
             // 
             iconDocente.IconChar = FontAwesome.Sharp.IconChar.User;
@@ -93,6 +112,7 @@
             iconDocente.Size = new Size(228, 30);
             iconDocente.Text = "Docentes";
             iconDocente.Click += iconDocente_Click;
+
             // 
             // iconMenuItem3
             // 
@@ -149,6 +169,9 @@
         private FontAwesome.Sharp.IconMenuItem iconMenuItem5;
         private FontAwesome.Sharp.IconMenuItem iconMenuItem3;
         private FontAwesome.Sharp.IconMenuItem iconMenuItem4;
+
+        private FontAwesome.Sharp.IconMenuItem iconMenuItem6;
+
 
         private FontAwesome.Sharp.IconMenuItem btnAlumnos;
 
