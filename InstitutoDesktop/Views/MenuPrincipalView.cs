@@ -1,5 +1,9 @@
 using InstitutoDesktop.Views;
+
 using InstitutoDesktop.Views.Commons.Alumnos;
+
+using InstitutoDesktop.Views.Commons;
+
 
 namespace InstitutoDesktop
 {
@@ -23,10 +27,16 @@ namespace InstitutoDesktop
             Application.Exit();
         }
 
+
         private void btnAlumnos_Click(object sender, EventArgs e)
         {
             AlumnosView alumnosView = new AlumnosView();
             alumnosView.ShowDialog();
+         }
+        private void iconDocente_Click(object sender, EventArgs e)
+        {
+            DocentesView docentesView = new DocentesView();
+            docentesView.ShowDialog();
         }
     }
 }
