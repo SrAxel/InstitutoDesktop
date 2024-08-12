@@ -30,8 +30,8 @@
         {
             dataGridCarreras = new DataGridView();
             btnAgregar = new FontAwesome.Sharp.IconButton();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
+            btnEditar = new FontAwesome.Sharp.IconButton();
+            btnEliminar = new FontAwesome.Sharp.IconButton();
             iconButton3 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)dataGridCarreras).BeginInit();
             SuspendLayout();
@@ -42,13 +42,13 @@
             dataGridCarreras.AllowUserToDeleteRows = false;
             dataGridCarreras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridCarreras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridCarreras.Location = new Point(59, 38);
-            dataGridCarreras.Margin = new Padding(3, 4, 3, 4);
+            dataGridCarreras.Location = new Point(74, 48);
+            dataGridCarreras.Margin = new Padding(4, 5, 4, 5);
             dataGridCarreras.Name = "dataGridCarreras";
             dataGridCarreras.ReadOnly = true;
             dataGridCarreras.RowHeadersWidth = 62;
             dataGridCarreras.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridCarreras.Size = new Size(784, 414);
+            dataGridCarreras.Size = new Size(980, 518);
             dataGridCarreras.TabIndex = 0;
             // 
             // btnAgregar
@@ -58,46 +58,46 @@
             btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Regular;
             btnAgregar.IconSize = 24;
             btnAgregar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAgregar.Location = new Point(84, 473);
-            btnAgregar.Margin = new Padding(3, 4, 3, 4);
+            btnAgregar.Location = new Point(105, 591);
+            btnAgregar.Margin = new Padding(4, 5, 4, 5);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(127, 40);
+            btnAgregar.Size = new Size(159, 50);
             btnAgregar.TabIndex = 1;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
             // 
-            // iconButton1
+            // btnEditar
             // 
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.File;
-            iconButton1.IconColor = Color.Black;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Regular;
-            iconButton1.IconSize = 24;
-            iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton1.Location = new Point(246, 473);
-            iconButton1.Margin = new Padding(3, 4, 3, 4);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(127, 40);
-            iconButton1.TabIndex = 2;
-            iconButton1.Text = "Editar";
-            iconButton1.UseVisualStyleBackColor = true;
-            iconButton1.Click += iconButton1_Click;
+            btnEditar.IconChar = FontAwesome.Sharp.IconChar.File;
+            btnEditar.IconColor = Color.Black;
+            btnEditar.IconFont = FontAwesome.Sharp.IconFont.Regular;
+            btnEditar.IconSize = 24;
+            btnEditar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEditar.Location = new Point(308, 591);
+            btnEditar.Margin = new Padding(4, 5, 4, 5);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(159, 50);
+            btnEditar.TabIndex = 2;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
             // 
-            // iconButton2
+            // btnEliminar
             // 
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.File;
-            iconButton2.IconColor = Color.Black;
-            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Regular;
-            iconButton2.IconSize = 24;
-            iconButton2.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton2.Location = new Point(411, 473);
-            iconButton2.Margin = new Padding(3, 4, 3, 4);
-            iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(127, 40);
-            iconButton2.TabIndex = 3;
-            iconButton2.Text = "Eliminar";
-            iconButton2.UseVisualStyleBackColor = true;
-            iconButton2.Click += iconButton2_Click;
+            btnEliminar.IconChar = FontAwesome.Sharp.IconChar.File;
+            btnEliminar.IconColor = Color.Black;
+            btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Regular;
+            btnEliminar.IconSize = 24;
+            btnEliminar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEliminar.Location = new Point(514, 591);
+            btnEliminar.Margin = new Padding(4, 5, 4, 5);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(159, 50);
+            btnEliminar.TabIndex = 3;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // iconButton3
             // 
@@ -106,10 +106,10 @@
             iconButton3.IconFont = FontAwesome.Sharp.IconFont.Regular;
             iconButton3.IconSize = 24;
             iconButton3.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton3.Location = new Point(786, 498);
-            iconButton3.Margin = new Padding(3, 4, 3, 4);
+            iconButton3.Location = new Point(982, 622);
+            iconButton3.Margin = new Padding(4, 5, 4, 5);
             iconButton3.Name = "iconButton3";
-            iconButton3.Size = new Size(127, 40);
+            iconButton3.Size = new Size(159, 50);
             iconButton3.TabIndex = 4;
             iconButton3.Text = "Salir";
             iconButton3.UseVisualStyleBackColor = true;
@@ -117,15 +117,15 @@
             // 
             // CarrerasView
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(982, 567);
+            ClientSize = new Size(1228, 709);
             Controls.Add(iconButton3);
-            Controls.Add(iconButton2);
-            Controls.Add(iconButton1);
+            Controls.Add(btnEliminar);
+            Controls.Add(btnEditar);
             Controls.Add(btnAgregar);
             Controls.Add(dataGridCarreras);
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "CarrerasView";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Carreras";
@@ -137,8 +137,8 @@
 
         private DataGridView dataGridCarreras;
         private FontAwesome.Sharp.IconButton btnAgregar;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton btnEditar;
+        private FontAwesome.Sharp.IconButton btnEliminar;
         private FontAwesome.Sharp.IconButton iconButton3;
     }
 }
