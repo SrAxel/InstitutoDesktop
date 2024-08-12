@@ -17,40 +17,39 @@ namespace InstitutoDesktop.Views.Commons
     public partial class AgregarEditarDocenteView : Form
     {
         IGenericService<Docente> docenteService = new GenericService<Docente>();
-        private int idEditar = 0;
-
+        private Docente docente;
         public AgregarEditarDocenteView()
         {
             InitializeComponent();
+            docente = new Docente();
         }
 
 
-        public AgregarEditarDocenteView(int idEditar)
+        public AgregarEditarDocenteView(Docente docente)
         {
             InitializeComponent();
-            this.idEditar = idEditar;
+            this.docente = docente;
             CargarDatosDocenteAEditar();
         }
 
         private async void CargarDatosDocenteAEditar()
         {
-            var docente = await docenteService.GetByIdAsync(idEditar);
-            if (docente != null)
-            {
+           
+            
                 txtNombre.Text = docente.Nombre;
-            }
+            
         }
 
         private async void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (idEditar == 0)
+            docente.Nombre= txtNombre.Text;
+
+            if (docente.Id == 0)
             {
-                var docente = new Docente() { Nombre = txtNombre.Text};
                 await docenteService.AddAsync(docente);
             }
             else
             {
-                var docente = new Docente() { Id = idEditar, Nombre = txtNombre.Text };
                 await docenteService.UpdateAsync(docente);
             }
 
