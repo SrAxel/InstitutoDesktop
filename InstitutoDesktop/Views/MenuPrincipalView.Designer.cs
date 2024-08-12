@@ -32,6 +32,7 @@
             iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem2 = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem5 = new FontAwesome.Sharp.IconMenuItem();
+            iconMenuItem7 = new FontAwesome.Sharp.IconMenuItem();
 
             iconMenuItem6 = new FontAwesome.Sharp.IconMenuItem();
 
@@ -66,6 +67,7 @@
             // 
             // iconMenuItem2
             // 
+            iconMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { iconMenuItem5, iconMenuItem7 });
 
             iconMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { iconMenuItem5, iconMenuItem6 });
 
@@ -91,6 +93,16 @@
             iconMenuItem5.Size = new Size(228, 30);
             iconMenuItem5.Text = "Carreras";
             iconMenuItem5.Click += iconMenuItem5_Click;
+            // 
+            // iconMenuItem7
+            // 
+            iconMenuItem7.IconChar = FontAwesome.Sharp.IconChar.ClockFour;
+            iconMenuItem7.IconColor = Color.Black;
+            iconMenuItem7.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconMenuItem7.Name = "iconMenuItem7";
+            iconMenuItem7.Size = new Size(228, 30);
+            iconMenuItem7.Text = "Horas";
+            iconMenuItem7.Click += iconMenuItem7_Click;
             // 
 
             // iconMenuItem6
@@ -169,6 +181,7 @@
         private FontAwesome.Sharp.IconMenuItem iconMenuItem5;
         private FontAwesome.Sharp.IconMenuItem iconMenuItem3;
         private FontAwesome.Sharp.IconMenuItem iconMenuItem4;
+        private FontAwesome.Sharp.IconMenuItem iconMenuItem7;
 
         private FontAwesome.Sharp.IconMenuItem iconMenuItem6;
 

@@ -1,5 +1,6 @@
 using InstitutoDesktop.Views;
 using InstitutoDesktop.Views.Inscripciones;
+using InstitutoDesktop.Views.Horarios;
 
 using InstitutoDesktop.Views.Commons.Alumnos;
 
@@ -45,6 +46,12 @@ namespace InstitutoDesktop
             DocentesView docentesView = new DocentesView();
             docentesView.ShowDialog();
 
+        }
+
+        private void iconMenuItem7_Click(object sender, EventArgs e)
+        {
+            HorasView horariosView = new HorasView();
+            horariosView.ShowDialog();
         }
     }
 }

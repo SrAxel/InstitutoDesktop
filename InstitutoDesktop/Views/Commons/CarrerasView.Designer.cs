@@ -42,13 +42,13 @@
             dataGridCarreras.AllowUserToDeleteRows = false;
             dataGridCarreras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridCarreras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridCarreras.Location = new Point(74, 47);
-            dataGridCarreras.Margin = new Padding(4, 5, 4, 5);
+            dataGridCarreras.Location = new Point(59, 38);
+            dataGridCarreras.Margin = new Padding(3, 4, 3, 4);
             dataGridCarreras.Name = "dataGridCarreras";
             dataGridCarreras.ReadOnly = true;
             dataGridCarreras.RowHeadersWidth = 62;
             dataGridCarreras.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridCarreras.Size = new Size(980, 518);
+            dataGridCarreras.Size = new Size(784, 414);
             dataGridCarreras.TabIndex = 0;
             // 
             // btnAgregar
@@ -58,10 +58,10 @@
             btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Regular;
             btnAgregar.IconSize = 24;
             btnAgregar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAgregar.Location = new Point(105, 591);
-            btnAgregar.Margin = new Padding(4, 5, 4, 5);
+            btnAgregar.Location = new Point(84, 473);
+            btnAgregar.Margin = new Padding(3, 4, 3, 4);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(159, 50);
+            btnAgregar.Size = new Size(127, 40);
             btnAgregar.TabIndex = 1;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
@@ -74,10 +74,10 @@
             iconButton1.IconFont = FontAwesome.Sharp.IconFont.Regular;
             iconButton1.IconSize = 24;
             iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton1.Location = new Point(308, 591);
-            iconButton1.Margin = new Padding(4, 5, 4, 5);
+            iconButton1.Location = new Point(246, 473);
+            iconButton1.Margin = new Padding(3, 4, 3, 4);
             iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(159, 50);
+            iconButton1.Size = new Size(127, 40);
             iconButton1.TabIndex = 2;
             iconButton1.Text = "Editar";
             iconButton1.UseVisualStyleBackColor = true;
@@ -90,10 +90,10 @@
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Regular;
             iconButton2.IconSize = 24;
             iconButton2.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton2.Location = new Point(514, 591);
-            iconButton2.Margin = new Padding(4, 5, 4, 5);
+            iconButton2.Location = new Point(411, 473);
+            iconButton2.Margin = new Padding(3, 4, 3, 4);
             iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(159, 50);
+            iconButton2.Size = new Size(127, 40);
             iconButton2.TabIndex = 3;
             iconButton2.Text = "Eliminar";
             iconButton2.UseVisualStyleBackColor = true;
@@ -106,10 +106,10 @@
             iconButton3.IconFont = FontAwesome.Sharp.IconFont.Regular;
             iconButton3.IconSize = 24;
             iconButton3.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton3.Location = new Point(982, 622);
-            iconButton3.Margin = new Padding(4, 5, 4, 5);
+            iconButton3.Location = new Point(786, 498);
+            iconButton3.Margin = new Padding(3, 4, 3, 4);
             iconButton3.Name = "iconButton3";
-            iconButton3.Size = new Size(159, 50);
+            iconButton3.Size = new Size(127, 40);
             iconButton3.TabIndex = 4;
             iconButton3.Text = "Salir";
             iconButton3.UseVisualStyleBackColor = true;
@@ -117,15 +117,15 @@
             // 
             // CarrerasView
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1181, 686);
+            ClientSize = new Size(982, 567);
             Controls.Add(iconButton3);
             Controls.Add(iconButton2);
             Controls.Add(iconButton1);
             Controls.Add(btnAgregar);
             Controls.Add(dataGridCarreras);
-            Margin = new Padding(4, 5, 4, 5);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "CarrerasView";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Carreras";
