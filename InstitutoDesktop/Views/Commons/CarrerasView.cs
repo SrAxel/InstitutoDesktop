@@ -17,16 +17,18 @@ namespace InstitutoDesktop.Views
     public partial class CarrerasView : Form
     {
         IGenericService<Carrera> carreraService = new GenericService<Carrera>();
+        BindingSource listaCarreras = new BindingSource();
 
         public CarrerasView()
         {
             InitializeComponent();
+            dataGridCarreras.DataSource=listaCarreras;
             CargarGrilla();
         }
 
         private async Task CargarGrilla()
         {
-            dataGridCarreras.DataSource = await carreraService.GetAllAsync();
+            listaCarreras.DataSource = await carreraService.GetAllAsync();
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
@@ -41,22 +43,21 @@ namespace InstitutoDesktop.Views
             CargarGrilla();
         }
 
-        private async void iconButton2_Click(object sender, EventArgs e)
+        private async void btnEliminar_Click(object sender, EventArgs e)
         {
-            var idEliminar = (int)dataGridCarreras.CurrentRow.Cells[0].Value;
-            var nombreCarrera = (string)dataGridCarreras.CurrentRow.Cells[1].Value;
-            var respuesta = MessageBox.Show($"¿Está seguro que quiere borrar a la carrera {nombreCarrera}", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var carrera = (Carrera)listaCarreras.Current;
+            var respuesta = MessageBox.Show($"¿Está seguro que quiere borrar a la carrera {carrera.Nombre}", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (respuesta == DialogResult.Yes)
             {
-                await carreraService.DeleteAsync(idEliminar);
+                await carreraService.DeleteAsync(carrera.Id);
                 await CargarGrilla();
             }
         }
 
-        private async void iconButton1_Click(object sender, EventArgs e)
+        private async void btnEditar_Click(object sender, EventArgs e)
         {
-            var idEditar = (int)dataGridCarreras.CurrentRow.Cells[0].Value;
-            AgregarEditarCarreraView agregarEditarCarreraView = new AgregarEditarCarreraView(idEditar);
+            var carrera = (Carrera)listaCarreras.Current;
+            AgregarEditarCarreraView agregarEditarCarreraView = new AgregarEditarCarreraView(carrera);
             agregarEditarCarreraView.ShowDialog();
             await CargarGrilla();
         }
