@@ -17,17 +17,19 @@ namespace InstitutoDesktop.Views.Commons
     public partial class DocentesView : Form
     {
         IGenericService<Docente> docenteService = new GenericService<Docente>();
+        BindingSource ListaDocente = new BindingSource();
 
         public DocentesView()
         {
             InitializeComponent();
+            dataGridDocentes.DataSource = ListaDocente;
             CargarGrilla();
 
         }
 
         private async Task CargarGrilla()
         {
-            dataGridDocentes.DataSource = await docenteService.GetAllAsync();
+            ListaDocente.DataSource = await docenteService.GetAllAsync();
 
         }
 
@@ -40,20 +42,19 @@ namespace InstitutoDesktop.Views.Commons
 
         private async void iconButton1_Click(object sender, EventArgs e)
         {
-            var idEditar = (int)dataGridDocentes.CurrentRow.Cells[0].Value;
-            AgregarEditarDocenteView agregarEditarDocenteView = new AgregarEditarDocenteView(idEditar);
+            var docente = (Docente)ListaDocente.Current;
+            AgregarEditarDocenteView agregarEditarDocenteView = new AgregarEditarDocenteView(docente);
             agregarEditarDocenteView.ShowDialog();
             await CargarGrilla();
         }
 
         private async void iconButton2_Click(object sender, EventArgs e)
         {
-            var idEliminar = (int)dataGridDocentes.CurrentRow.Cells[0].Value;
-            var nombreDocente = (string)dataGridDocentes.CurrentRow.Cells[1].Value;
-            var respuesta = MessageBox.Show($"¿Está seguro que quiere borrar el docente{nombreDocente}", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var docente = (Docente)ListaDocente.Current;
+            var respuesta = MessageBox.Show($"¿Está seguro que quiere borrar el docente{docente.Nombre}", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (respuesta == DialogResult.Yes)
             {
-                await docenteService.DeleteAsync(idEliminar);
+                await docenteService.DeleteAsync(docente.Id);
                 await CargarGrilla();
             }
         }
