@@ -11,48 +11,48 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media.Media3D;
 
 namespace InstitutoDesktop.Views.Inscripciones
 {
     public partial class AgregarEditarCicloLectivoView : Form
     {
         IGenericService<CicloLectivo> ciclolectivoService = new GenericService<CicloLectivo>();
-        private int idEditar = 0;
+        private CicloLectivo cicloLectivo;
         public AgregarEditarCicloLectivoView()
         {
             InitializeComponent();
+            cicloLectivo = new CicloLectivo();
         }
-        public AgregarEditarCicloLectivoView(int idEditar)
+        public AgregarEditarCicloLectivoView(CicloLectivo cicloLectivo)
         {
             InitializeComponent();
-            this.idEditar = idEditar;
+            this.cicloLectivo = cicloLectivo;
             CargarDatosCicloLectivoAEditar();
         }
 
         private async void CargarDatosCicloLectivoAEditar()
         {
-            var ciclolectivo = await ciclolectivoService.GetByIdAsync(idEditar);
-            if (ciclolectivo != null)
-            {
-                txtNombre.Text = ciclolectivo.Nombre;
+          
+           
+                txtNombre.Text = cicloLectivo.Nombre;
                
-            }
+          
 
         }
 
         private async void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (idEditar == 0)
+            cicloLectivo.Nombre = txtNombre.Text;
+
+            if (cicloLectivo.Id == 0)
             {
-                var ciclolectivo = new CicloLectivo() { Nombre = txtNombre.Text };
-                await ciclolectivoService.AddAsync(ciclolectivo);
+                await ciclolectivoService.AddAsync(cicloLectivo);
             }
             else
             {
-                var ciclolectivo = new CicloLectivo() { Id = idEditar, Nombre = txtNombre.Text };
-                await ciclolectivoService.UpdateAsync(ciclolectivo);
+                await ciclolectivoService.UpdateAsync(cicloLectivo);
             }
-
             this.Close();
         }
 

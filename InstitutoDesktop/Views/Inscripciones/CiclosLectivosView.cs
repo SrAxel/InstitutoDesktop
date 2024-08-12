@@ -20,15 +20,17 @@ namespace InstitutoDesktop.Views.Inscripciones
     public partial class CiclosLectivosView : Form
     {
         IGenericService<CicloLectivo> ciclolectivoService = new GenericService<CicloLectivo>();
+        BindingSource listaCicloLectivos = new BindingSource();
         public CiclosLectivosView()
         {
             InitializeComponent();
+            dataGridCiclosLectivos.DataSource = listaCicloLectivos;
             CargarGrilla();
         }
 
         private async Task CargarGrilla()
         {
-            dataGridCiclosLectivos.DataSource = await ciclolectivoService.GetAllAsync();
+            listaCicloLectivos.DataSource = await ciclolectivoService.GetAllAsync();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -45,20 +47,20 @@ namespace InstitutoDesktop.Views.Inscripciones
 
         private async void btnEditar_Click(object sender, EventArgs e)
         {
-            var idEditar = (int)dataGridCiclosLectivos.CurrentRow.Cells[0].Value;
-            AgregarEditarCicloLectivoView agregarEditarCicloLectivoView = new AgregarEditarCicloLectivoView(idEditar);
+            var ciclolectivo = (CicloLectivo)listaCicloLectivos.Current;
+            AgregarEditarCicloLectivoView agregarEditarCicloLectivoView = new AgregarEditarCicloLectivoView(ciclolectivo);
             agregarEditarCicloLectivoView.ShowDialog();
             await CargarGrilla();
         }
 
         private async void btnEliminar_Click(object sender, EventArgs e)
         {
-            var idEliminar = (int)dataGridCiclosLectivos.CurrentRow.Cells[0].Value;
-            var nombreCicloLectivo = (string)dataGridCiclosLectivos.CurrentRow.Cells[1].Value;
-            var respuesta = MessageBox.Show($"¿Está seguro que quiere borrar el Ciclo Lectivo {nombreCicloLectivo}", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var ciclolectivo = (CicloLectivo)listaCicloLectivos.Current;
+          
+            var respuesta = MessageBox.Show($"¿Está seguro que quiere borrar el Ciclo Lectivo {ciclolectivo.Nombre}", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (respuesta == DialogResult.Yes)
             {
-                await ciclolectivoService.DeleteAsync(idEliminar);
+                await ciclolectivoService.DeleteAsync(ciclolectivo.Id);
                 await CargarGrilla();
             }
         }
