@@ -16,20 +16,17 @@ namespace InstitutoDesktop.Views.Horarios
 {
     public partial class HorasView : Form
     {
-        IGenericService<Hora> horarioService = new GenericService<Hora>();
+        IGenericService<Hora> horaService = new GenericService<Hora>();
+        BindingSource listaHoras = new BindingSource();
         public HorasView()
         {
             InitializeComponent();
+            dataGridHoras.DataSource = listaHoras;
             CargarGrilla();
         }
         private async Task CargarGrilla()
         {
-            dataGridHoras.DataSource = await horarioService.GetAllAsync();
-        }
-
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            listaHoras.DataSource = await horaService.GetAllAsync();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -41,22 +38,26 @@ namespace InstitutoDesktop.Views.Horarios
 
         private async void btnEditar_Click(object sender, EventArgs e)
         {
-            var idEditar = (int)dataGridHoras.CurrentRow.Cells[0].Value;
-            AgregarEditarHoraView agregarEditarHoraView = new AgregarEditarHoraView(idEditar);
+            var hora = (Hora)listaHoras.Current;
+            AgregarEditarHoraView agregarEditarHoraView = new AgregarEditarHoraView(hora);
             agregarEditarHoraView.ShowDialog();
             await CargarGrilla();
         }
 
         private async void btnEliminar_Click(object sender, EventArgs e)
         {
-            var idEliminar = (int)dataGridHoras.CurrentRow.Cells[0].Value;
-            var nombreHora = (string)dataGridHoras.CurrentRow.Cells[1].Value;
-            var respuesta = MessageBox.Show($"¿Está seguro que quiere borrar a la carrera {nombreHora}", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var hora = (Hora)listaHoras.Current;
+            var respuesta = MessageBox.Show($"¿Está seguro que quiere borrar a la carrera {hora.Nombre}", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (respuesta == DialogResult.Yes)
             {
-                await horarioService.DeleteAsync(idEliminar);
+                await horaService.DeleteAsync(hora.Id);
                 await CargarGrilla();
             }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
