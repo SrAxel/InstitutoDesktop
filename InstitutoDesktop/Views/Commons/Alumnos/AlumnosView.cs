@@ -17,15 +17,18 @@ namespace InstitutoDesktop.Views.Commons.Alumnos
     public partial class AlumnosView : Form
     {
         IGenericService<Alumno> alumnoService = new GenericService<Alumno>();
+        BindingSource listaAlumnos=new BindingSource();
+
         public AlumnosView()
         {
             InitializeComponent();
+            dataGridAlumnos.DataSource = listaAlumnos;
             CargarGrilla();
         }
 
         private async Task CargarGrilla()
         {
-            dataGridAlumnos.DataSource = await alumnoService.GetAllAsync();
+            listaAlumnos.DataSource = await alumnoService.GetAllAsync();
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
@@ -42,20 +45,19 @@ namespace InstitutoDesktop.Views.Commons.Alumnos
 
         private async void iconButton2_Click(object sender, EventArgs e)
         {
-            var idEliminar = (int)dataGridAlumnos.CurrentRow.Cells[0].Value;
-            var nombreAlumno = (string)dataGridAlumnos.CurrentRow.Cells[1].Value;
-            var respuesta = MessageBox.Show($"¿Está seguro que quiere borrar a el alumno {nombreAlumno}", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var alumno = (Alumno)listaAlumnos.Current;
+            var respuesta = MessageBox.Show($"¿Está seguro que quiere borrar a el alumno {alumno.ApellidoNombre}", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (respuesta == DialogResult.Yes)
             {
-                await alumnoService.DeleteAsync(idEliminar);
+                await alumnoService.DeleteAsync(alumno.Id);
                 await CargarGrilla();
             }
         }
 
         private async void iconButton1_Click(object sender, EventArgs e)
         {
-            var idEditar = (int)dataGridAlumnos.CurrentRow.Cells[0].Value;
-            AgregarEditarAlumnosView agregarEditarAlumnosView = new AgregarEditarAlumnosView(idEditar);
+            var alumno = (Alumno)listaAlumnos.Current;
+            AgregarEditarAlumnosView agregarEditarAlumnosView = new AgregarEditarAlumnosView(alumno);
             agregarEditarAlumnosView.ShowDialog();
             await CargarGrilla();
         }
