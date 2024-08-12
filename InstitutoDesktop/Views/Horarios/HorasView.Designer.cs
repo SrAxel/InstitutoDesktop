@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            iconButton3 = new FontAwesome.Sharp.IconButton();
+            btnSalir = new FontAwesome.Sharp.IconButton();
             btnEliminar = new FontAwesome.Sharp.IconButton();
             btnEditar = new FontAwesome.Sharp.IconButton();
             btnAgregar = new FontAwesome.Sharp.IconButton();
@@ -36,21 +36,21 @@
             ((System.ComponentModel.ISupportInitialize)dataGridHoras).BeginInit();
             SuspendLayout();
             // 
-            // iconButton3
+            // btnSalir
             // 
-            iconButton3.IconChar = FontAwesome.Sharp.IconChar.File;
-            iconButton3.IconColor = Color.Black;
-            iconButton3.IconFont = FontAwesome.Sharp.IconFont.Regular;
-            iconButton3.IconSize = 24;
-            iconButton3.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton3.Location = new Point(787, 501);
-            iconButton3.Margin = new Padding(3, 4, 3, 4);
-            iconButton3.Name = "iconButton3";
-            iconButton3.Size = new Size(127, 40);
-            iconButton3.TabIndex = 9;
-            iconButton3.Text = "Salir";
-            iconButton3.UseVisualStyleBackColor = true;
-            iconButton3.Click += iconButton3_Click;
+            btnSalir.IconChar = FontAwesome.Sharp.IconChar.File;
+            btnSalir.IconColor = Color.Black;
+            btnSalir.IconFont = FontAwesome.Sharp.IconFont.Regular;
+            btnSalir.IconSize = 24;
+            btnSalir.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSalir.Location = new Point(787, 501);
+            btnSalir.Margin = new Padding(3, 4, 3, 4);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(127, 40);
+            btnSalir.TabIndex = 9;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
             // 
             // btnEliminar
             // 
@@ -120,7 +120,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(983, 566);
-            Controls.Add(iconButton3);
+            Controls.Add(btnSalir);
             Controls.Add(btnEliminar);
             Controls.Add(btnEditar);
             Controls.Add(btnAgregar);
@@ -134,7 +134,7 @@
 
         #endregion
 
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton btnSalir;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private FontAwesome.Sharp.IconButton btnEditar;
         private FontAwesome.Sharp.IconButton btnAgregar;
