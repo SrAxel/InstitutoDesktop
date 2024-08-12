@@ -1,4 +1,5 @@
 using InstitutoDesktop.Views;
+using InstitutoDesktop.Views.Horarios;
 
 namespace InstitutoDesktop
 {
@@ -20,6 +21,12 @@ namespace InstitutoDesktop
         private void iconMenuItem4_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void iconMenuItem7_Click(object sender, EventArgs e)
+        {
+            HorasView horariosView = new HorasView();
+            horariosView.ShowDialog();
         }
     }
 }
