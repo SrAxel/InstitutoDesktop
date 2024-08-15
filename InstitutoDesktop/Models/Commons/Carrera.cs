@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BlazorAppVSCode.Models.Commons
+namespace InstitutoDesktop.Models.Commons
 {
     public class Carrera 
     {

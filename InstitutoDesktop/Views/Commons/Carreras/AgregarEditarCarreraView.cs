@@ -1,5 +1,5 @@
-﻿using BlazorAppVSCode.Models.Commons;
-using InstitutoDesktop.Interfaces;
+﻿using InstitutoDesktop.Interfaces;
+using InstitutoDesktop.Models.Commons;
 using InstitutoDesktop.Services;
 using System;
 using System.Collections.Generic;
