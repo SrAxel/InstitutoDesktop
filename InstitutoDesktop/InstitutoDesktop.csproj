@@ -33,6 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Interfaces\Commons\" />
     <Folder Include="Models\Horarios\" />
     <Folder Include="Models\MesasExamenes\" />
     <Folder Include="Views\Inscripciones\" />

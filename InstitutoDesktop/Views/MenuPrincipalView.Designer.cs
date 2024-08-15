@@ -31,10 +31,10 @@
             menuStrip1 = new MenuStrip();
             iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem2 = new FontAwesome.Sharp.IconMenuItem();
-            iconMenuItem5 = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem7 = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem6 = new FontAwesome.Sharp.IconMenuItem();
             btnAlumnos = new FontAwesome.Sharp.IconMenuItem();
+            iconMenuItem5 = new FontAwesome.Sharp.IconMenuItem();
             iconDocente = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem3 = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem4 = new FontAwesome.Sharp.IconMenuItem();
@@ -72,16 +72,6 @@
             iconMenuItem2.Size = new Size(84, 28);
             iconMenuItem2.Text = "Bases";
             // 
-            // iconMenuItem5
-            // 
-            iconMenuItem5.IconChar = FontAwesome.Sharp.IconChar.School;
-            iconMenuItem5.IconColor = Color.Black;
-            iconMenuItem5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconMenuItem5.Name = "iconMenuItem5";
-            iconMenuItem5.Size = new Size(228, 30);
-            iconMenuItem5.Text = "Carreras";
-            iconMenuItem5.Click += iconMenuItem5_Click;
-            // 
             // iconMenuItem7
             // 
             iconMenuItem7.IconChar = FontAwesome.Sharp.IconChar.ClockFour;
@@ -112,10 +102,20 @@
             btnAlumnos.Text = "Alumnos";
             btnAlumnos.Click += btnAlumnos_Click;
             // 
+            // iconMenuItem5
+            // 
+            iconMenuItem5.IconChar = FontAwesome.Sharp.IconChar.School;
+            iconMenuItem5.IconColor = Color.Black;
+            iconMenuItem5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconMenuItem5.Name = "iconMenuItem5";
+            iconMenuItem5.Size = new Size(228, 30);
+            iconMenuItem5.Text = "Carreras";
+            iconMenuItem5.Click += iconMenuItem5_Click;
+            // 
             // iconDocente
             // 
             iconDocente.IconChar = FontAwesome.Sharp.IconChar.User;
-            iconDocente.IconColor = Color.Pink;
+            iconDocente.IconColor = Color.Black;
             iconDocente.IconFont = FontAwesome.Sharp.IconFont.Solid;
             iconDocente.Name = "iconDocente";
             iconDocente.Size = new Size(228, 30);
