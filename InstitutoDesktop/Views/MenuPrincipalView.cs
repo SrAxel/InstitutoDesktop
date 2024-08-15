@@ -1,10 +1,12 @@
 using InstitutoDesktop.Views;
 using InstitutoDesktop.Views.Inscripciones;
 using InstitutoDesktop.Views.Horarios;
+using InstitutoDesktop.Views.MesasExamenes;
 
 using InstitutoDesktop.Views.Commons.Alumnos;
 
 using InstitutoDesktop.Views.Commons;
+
 
 
 namespace InstitutoDesktop
@@ -32,7 +34,7 @@ namespace InstitutoDesktop
 
         private void iconMenuItem6_Click(object sender, EventArgs e)
         {
-            CiclosLectivosView ciclosLectivosView= new CiclosLectivosView();
+            CiclosLectivosView ciclosLectivosView = new CiclosLectivosView();
             ciclosLectivosView.ShowDialog();
         }
 
@@ -40,7 +42,7 @@ namespace InstitutoDesktop
         {
             AlumnosView alumnosView = new AlumnosView();
             alumnosView.ShowDialog();
-         }
+        }
         private void iconDocente_Click(object sender, EventArgs e)
         {
             DocentesView docentesView = new DocentesView();
@@ -52,6 +54,12 @@ namespace InstitutoDesktop
         {
             HorasView horariosView = new HorasView();
             horariosView.ShowDialog();
+        }
+
+        private void turnoExamenesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TurnoExamenesView turnoexamenesview = new TurnoExamenesView();
+            turnoexamenesview.ShowDialog();
         }
     }
 }

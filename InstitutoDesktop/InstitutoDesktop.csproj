@@ -34,10 +34,8 @@
 
   <ItemGroup>
     <Folder Include="Models\Horarios\" />
-    <Folder Include="Models\MesasExamenes\" />
     <Folder Include="Views\Inscripciones\" />
     <Folder Include="Views\Horarios\" />
-    <Folder Include="Views\MesasExamenes\" />
   </ItemGroup>
 
   <ItemGroup>
