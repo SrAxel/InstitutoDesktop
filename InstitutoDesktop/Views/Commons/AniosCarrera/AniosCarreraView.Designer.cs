@@ -83,6 +83,8 @@
             // 
             // dataGridAñosCarrera
             // 
+            dataGridAñosCarrera.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridAñosCarrera.BackgroundColor = SystemColors.GradientActiveCaption;
             dataGridAñosCarrera.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridAñosCarrera.Location = new Point(97, 88);
             dataGridAñosCarrera.Name = "dataGridAñosCarrera";
@@ -94,6 +96,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Lavender;
             ClientSize = new Size(800, 450);
             Controls.Add(dataGridAñosCarrera);
             Controls.Add(btnEliminar);

@@ -156,6 +156,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Lavender;
             ClientSize = new Size(800, 450);
             Controls.Add(txtEmail);
             Controls.Add(label3);

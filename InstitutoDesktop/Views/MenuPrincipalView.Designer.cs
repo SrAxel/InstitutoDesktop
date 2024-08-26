@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipalView));
             menuStrip1 = new MenuStrip();
             iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem2 = new FontAwesome.Sharp.IconMenuItem();
@@ -43,6 +44,7 @@
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = SystemColors.GradientActiveCaption;
             menuStrip1.ImageScalingSize = new Size(24, 24);
             menuStrip1.Items.AddRange(new ToolStripItem[] { iconMenuItem1, iconMenuItem2, iconMenuItem3 });
             menuStrip1.Location = new Point(0, 0);
@@ -74,51 +76,56 @@
             // 
             // iconMenuItem7
             // 
+            iconMenuItem7.BackColor = Color.Lavender;
             iconMenuItem7.IconChar = FontAwesome.Sharp.IconChar.ClockFour;
             iconMenuItem7.IconColor = Color.Black;
             iconMenuItem7.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem7.Name = "iconMenuItem7";
-            iconMenuItem7.Size = new Size(228, 30);
+            iconMenuItem7.Size = new Size(176, 26);
             iconMenuItem7.Text = "Horas";
             iconMenuItem7.Click += iconMenuItem7_Click;
             // 
             // iconMenuItem6
             // 
+            iconMenuItem6.BackColor = Color.Lavender;
             iconMenuItem6.IconChar = FontAwesome.Sharp.IconChar.Hurricane;
             iconMenuItem6.IconColor = Color.Black;
             iconMenuItem6.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem6.Name = "iconMenuItem6";
-            iconMenuItem6.Size = new Size(228, 30);
+            iconMenuItem6.Size = new Size(176, 26);
             iconMenuItem6.Text = "Ciclo Lectivo";
             iconMenuItem6.Click += iconMenuItem6_Click;
             // 
             // btnAlumnos
             // 
+            btnAlumnos.BackColor = Color.Lavender;
             btnAlumnos.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
             btnAlumnos.IconColor = Color.Black;
             btnAlumnos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnAlumnos.Name = "btnAlumnos";
-            btnAlumnos.Size = new Size(228, 30);
+            btnAlumnos.Size = new Size(176, 26);
             btnAlumnos.Text = "Alumnos";
             btnAlumnos.Click += btnAlumnos_Click;
             // 
             // iconMenuItem5
             // 
+            iconMenuItem5.BackColor = Color.Lavender;
             iconMenuItem5.IconChar = FontAwesome.Sharp.IconChar.School;
             iconMenuItem5.IconColor = Color.Black;
             iconMenuItem5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem5.Name = "iconMenuItem5";
-            iconMenuItem5.Size = new Size(228, 30);
+            iconMenuItem5.Size = new Size(176, 26);
             iconMenuItem5.Text = "Carreras";
             iconMenuItem5.Click += iconMenuItem5_Click;
             // 
             // iconDocente
             // 
+            iconDocente.BackColor = Color.Lavender;
             iconDocente.IconChar = FontAwesome.Sharp.IconChar.User;
             iconDocente.IconColor = Color.Black;
             iconDocente.IconFont = FontAwesome.Sharp.IconFont.Solid;
             iconDocente.Name = "iconDocente";
-            iconDocente.Size = new Size(228, 30);
+            iconDocente.Size = new Size(176, 26);
             iconDocente.Text = "Docentes";
             iconDocente.Click += iconDocente_Click;
             // 
@@ -134,6 +141,7 @@
             // 
             // iconMenuItem4
             // 
+            iconMenuItem4.BackColor = Color.Lavender;
             iconMenuItem4.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
             iconMenuItem4.IconColor = Color.Black;
             iconMenuItem4.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -146,8 +154,10 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Cornsilk;
             ClientSize = new Size(1091, 662);
             Controls.Add(menuStrip1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Margin = new Padding(3, 4, 3, 4);
             Name = "MenuPrincipalView";

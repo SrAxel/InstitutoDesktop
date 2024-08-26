@@ -38,7 +38,8 @@
             // 
             // btnSalir
             // 
-            btnSalir.IconChar = FontAwesome.Sharp.IconChar.File;
+            btnSalir.BackColor = SystemColors.Window;
+            btnSalir.IconChar = FontAwesome.Sharp.IconChar.Cloudflare;
             btnSalir.IconColor = Color.Black;
             btnSalir.IconFont = FontAwesome.Sharp.IconFont.Regular;
             btnSalir.IconSize = 24;
@@ -49,12 +50,12 @@
             btnSalir.Size = new Size(127, 40);
             btnSalir.TabIndex = 9;
             btnSalir.Text = "Salir";
-            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.UseVisualStyleBackColor = false;
             btnSalir.Click += btnSalir_Click;
             // 
             // btnEliminar
             // 
-            btnEliminar.IconChar = FontAwesome.Sharp.IconChar.File;
+            btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Close;
             btnEliminar.IconColor = Color.Black;
             btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Regular;
             btnEliminar.IconSize = 24;
@@ -70,7 +71,7 @@
             // 
             // btnEditar
             // 
-            btnEditar.IconChar = FontAwesome.Sharp.IconChar.File;
+            btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
             btnEditar.IconColor = Color.Black;
             btnEditar.IconFont = FontAwesome.Sharp.IconFont.Regular;
             btnEditar.IconSize = 24;
@@ -86,7 +87,7 @@
             // 
             // btnAgregar
             // 
-            btnAgregar.IconChar = FontAwesome.Sharp.IconChar.File;
+            btnAgregar.IconChar = FontAwesome.Sharp.IconChar.Add;
             btnAgregar.IconColor = Color.Black;
             btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Regular;
             btnAgregar.IconSize = 24;
@@ -105,6 +106,7 @@
             dataGridHoras.AllowUserToAddRows = false;
             dataGridHoras.AllowUserToDeleteRows = false;
             dataGridHoras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridHoras.BackgroundColor = SystemColors.GradientActiveCaption;
             dataGridHoras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridHoras.Location = new Point(60, 41);
             dataGridHoras.Margin = new Padding(3, 4, 3, 4);
@@ -119,6 +121,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Lavender;
             ClientSize = new Size(983, 566);
             Controls.Add(btnSalir);
             Controls.Add(btnEliminar);

@@ -82,7 +82,7 @@
             // 
             txtNombre.Font = new Font("Segoe UI", 11F);
             txtNombre.Location = new Point(234, 101);
-            txtNombre.Margin = new Padding(2, 2, 2, 2);
+            txtNombre.Margin = new Padding(2);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(257, 32);
             txtNombre.TabIndex = 6;
@@ -91,7 +91,7 @@
             // 
             txtSigla.Font = new Font("Segoe UI", 11F);
             txtSigla.Location = new Point(234, 163);
-            txtSigla.Margin = new Padding(2, 2, 2, 2);
+            txtSigla.Margin = new Padding(2);
             txtSigla.Name = "txtSigla";
             txtSigla.Size = new Size(257, 32);
             txtSigla.TabIndex = 8;
@@ -107,10 +107,11 @@
             label2.TabIndex = 7;
             label2.Text = "Sigla :";
             // 
-            // AgregarEditarCiclosLectivosView
+            // AgregarEditarCarreraView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Lavender;
             ClientSize = new Size(640, 360);
             Controls.Add(txtSigla);
             Controls.Add(label2);
@@ -118,8 +119,8 @@
             Controls.Add(label1);
             Controls.Add(btnCancelar);
             Controls.Add(btnGuardar);
-            Margin = new Padding(2, 2, 2, 2);
-            Name = "AgregarEditarCiclosLectivosView";
+            Margin = new Padding(2);
+            Name = "AgregarEditarCarreraView";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Agregar/Editar Carrera";
             ResumeLayout(false);

@@ -12,18 +12,18 @@ namespace InstitutoDesktop.Views.AniosCarrera
 {
     public partial class AniosCarreraView : Form
     {
-        AniosCarreraService aniosCarreraService;
+        //AniosCarreraService aniosCarreraService;
         BindingSource listaAniosCarrera;
         public AniosCarreraView()
         {
             InitializeComponent();
-            dataGridAniosCarrera.DataSource = listaAniosCarrera;
+            //dataGridAniosCarrera.DataSource = listaAniosCarrera;
             CargarGrilla();
         }
 
         private async void CargarGrilla()
         {
-            listaAniosCarrera.DataSource = await aniosCarreraService.GetByCarreraAsync();
+            //listaAniosCarrera.DataSource = await aniosCarreraService.GetByCarreraAsync();
         }
     }
 }

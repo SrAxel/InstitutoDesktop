@@ -38,7 +38,7 @@
             // 
             // btnSalir
             // 
-            btnSalir.IconChar = FontAwesome.Sharp.IconChar.File;
+            btnSalir.IconChar = FontAwesome.Sharp.IconChar.Cloudflare;
             btnSalir.IconColor = Color.Black;
             btnSalir.IconFont = FontAwesome.Sharp.IconFont.Regular;
             btnSalir.IconSize = 24;
@@ -54,7 +54,7 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.IconChar = FontAwesome.Sharp.IconChar.File;
+            btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Close;
             btnEliminar.IconColor = Color.Black;
             btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Regular;
             btnEliminar.IconSize = 24;
@@ -70,7 +70,7 @@
             // 
             // btnEditar
             // 
-            btnEditar.IconChar = FontAwesome.Sharp.IconChar.File;
+            btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
             btnEditar.IconColor = Color.Black;
             btnEditar.IconFont = FontAwesome.Sharp.IconFont.Regular;
             btnEditar.IconSize = 24;
@@ -86,7 +86,7 @@
             // 
             // btnAgregar
             // 
-            btnAgregar.IconChar = FontAwesome.Sharp.IconChar.File;
+            btnAgregar.IconChar = FontAwesome.Sharp.IconChar.Add;
             btnAgregar.IconColor = Color.Black;
             btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Regular;
             btnAgregar.IconSize = 24;
@@ -105,6 +105,7 @@
             dataGridCiclosLectivos.AllowUserToAddRows = false;
             dataGridCiclosLectivos.AllowUserToDeleteRows = false;
             dataGridCiclosLectivos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridCiclosLectivos.BackgroundColor = SystemColors.GradientActiveCaption;
             dataGridCiclosLectivos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridCiclosLectivos.Location = new Point(67, 60);
             dataGridCiclosLectivos.Margin = new Padding(3, 4, 3, 4);
@@ -119,6 +120,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Lavender;
             ClientSize = new Size(953, 595);
             Controls.Add(btnSalir);
             Controls.Add(btnEliminar);

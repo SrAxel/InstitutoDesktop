@@ -38,7 +38,7 @@
             // 
             // iconButton3
             // 
-            iconButton3.IconChar = FontAwesome.Sharp.IconChar.File;
+            iconButton3.IconChar = FontAwesome.Sharp.IconChar.Cloudflare;
             iconButton3.IconColor = Color.Black;
             iconButton3.IconFont = FontAwesome.Sharp.IconFont.Regular;
             iconButton3.IconSize = 24;
@@ -54,7 +54,7 @@
             // 
             // iconButton2
             // 
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.File;
+            iconButton2.IconChar = FontAwesome.Sharp.IconChar.Close;
             iconButton2.IconColor = Color.Black;
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Regular;
             iconButton2.IconSize = 24;
@@ -70,7 +70,7 @@
             // 
             // iconButton1
             // 
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.File;
+            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Edit;
             iconButton1.IconColor = Color.Black;
             iconButton1.IconFont = FontAwesome.Sharp.IconFont.Regular;
             iconButton1.IconSize = 24;
@@ -86,7 +86,7 @@
             // 
             // btnAgregar
             // 
-            btnAgregar.IconChar = FontAwesome.Sharp.IconChar.File;
+            btnAgregar.IconChar = FontAwesome.Sharp.IconChar.Add;
             btnAgregar.IconColor = Color.Black;
             btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Regular;
             btnAgregar.IconSize = 24;
@@ -105,6 +105,7 @@
             dataGridDocentes.AllowUserToAddRows = false;
             dataGridDocentes.AllowUserToDeleteRows = false;
             dataGridDocentes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridDocentes.BackgroundColor = SystemColors.GradientActiveCaption;
             dataGridDocentes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridDocentes.Location = new Point(80, 13);
             dataGridDocentes.Margin = new Padding(3, 4, 3, 4);
@@ -119,6 +120,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Lavender;
             ClientSize = new Size(974, 592);
             Controls.Add(iconButton3);
             Controls.Add(iconButton2);

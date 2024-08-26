@@ -101,6 +101,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Lavender;
             ClientSize = new Size(762, 471);
             Controls.Add(chkRecreo);
             Controls.Add(txtNombre);
