@@ -1,5 +1,5 @@
 ﻿using BlazorAppVSCode.Models.Commons;
-using ExtensionMethods;
+using InstitutoDesktop.ExtensionMethods;
 using InstitutoDesktop.Interfaces;
 using InstitutoDesktop.Models.Commons;
 using InstitutoDesktop.Services;

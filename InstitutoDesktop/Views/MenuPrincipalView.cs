@@ -5,7 +5,10 @@ using InstitutoDesktop.Views.Horarios;
 using InstitutoDesktop.Views.Commons.Alumnos;
 
 using InstitutoDesktop.Views.Commons;
+using InstitutoDesktop.Views.Commons.AnioCarreras;
+using InstitutoDesktop.Views.Commons.Materias;
 using InstitutoDesktop.Views.AniosCarrera;
+
 
 
 namespace InstitutoDesktop
@@ -53,6 +56,14 @@ namespace InstitutoDesktop
         {
             HorasView horariosView = new HorasView();
             horariosView.ShowDialog();
+        }
+
+
+
+        private void iconMenuItem9_Click(object sender, EventArgs e)
+        {
+            MateriaView materiaView = new MateriaView();
+            materiaView.ShowDialog();
         }
 
         private void iconMenuItemAniosCarrera_Click(object sender, EventArgs e)

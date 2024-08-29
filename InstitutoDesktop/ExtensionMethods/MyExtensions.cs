@@ -11,8 +11,9 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
+using System.Threading.Tasks;
 
-namespace ExtensionMethods
+namespace InstitutoDesktop.ExtensionMethods
 {
     public static class MyExtensions
     {
@@ -50,10 +51,10 @@ namespace ExtensionMethods
 
 
 
-        public static void DarColorAFilas(this DataGridView grid,int nroColumna, Func<decimal,bool> condicion, Color color)
+        public static void DarColorAFilas(this DataGridView grid, int nroColumna, Func<decimal, bool> condicion, Color color)
         {
             foreach (DataGridViewRow row in grid.Rows)
-                if (row.Cells.Count>nroColumna&&
+                if (row.Cells.Count > nroColumna &&
                     condicion(Convert.ToDecimal(row.Cells[nroColumna].Value)))
                 {
                     row.DefaultCellStyle.BackColor = color;

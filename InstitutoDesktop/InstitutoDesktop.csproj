@@ -38,6 +38,7 @@
     <Folder Include="Views\Inscripciones\" />
     <Folder Include="Views\Horarios\" />
     <Folder Include="Views\MesasExamenes\" />
+    <Folder Include="Views\MesaExamen\" />
   </ItemGroup>
 
   <ItemGroup>

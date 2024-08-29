@@ -2,7 +2,12 @@
 using InstitutoDesktop.Class;
 using InstitutoDesktop.Interfaces.Commons;
 using InstitutoDesktop.Models.Commons;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace InstitutoDesktop.Services
 {
@@ -17,7 +22,7 @@ namespace InstitutoDesktop.Services
             this.client = new HttpClient();
             this.options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
             var urlApi = Properties.Settings.Default.UrlApi;
-            this._endpoint = urlApi+ApiEndpoints.GetEndpoint(nameof(AnioCarrera));
+            this._endpoint = urlApi + ApiEndpoints.GetEndpoint(nameof(AnioCarrera));
         }
         
         public async Task<List<AnioCarrera>?> GetByCarreraAsync(int? idCarrera)
