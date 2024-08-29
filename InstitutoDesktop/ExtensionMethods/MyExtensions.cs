@@ -1,13 +1,23 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Dynamic;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Reflection;
 using System.Text;
+using System.Windows.Forms;
 using System.Threading.Tasks;
 
 namespace InstitutoDesktop.ExtensionMethods
 {
     public static class MyExtensions
     {
+
         public static int IdSeleccionado(this ComboBox combo)
         {
             if (combo.SelectedValue != null && combo.SelectedValue.GetType() == typeof(int))
@@ -106,5 +116,8 @@ namespace InstitutoDesktop.ExtensionMethods
             return Application.OpenForms.OfType<Form>().Where(f => f.Name == form.Name).SingleOrDefault<Form>() != null;
         }
 
+        
+
     }
+
 }

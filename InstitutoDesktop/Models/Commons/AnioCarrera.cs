@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace InstitutoDesktop.Models.Commons
 {
-    public class AnioCarrera
+    public class AnioCarrera 
     {
         public int Id { get; set; }
         public string Nombre { get; set; } = string.Empty;

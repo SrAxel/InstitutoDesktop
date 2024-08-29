@@ -68,5 +68,12 @@ namespace InstitutoDesktop
             MateriaView materiaView = new MateriaView();
             materiaView.ShowDialog();
         }
+
+        private void iconMenuItemAniosCarrera_Click(object sender, EventArgs e)
+        {
+            AniosCarreraView aniosCarreraView = new AniosCarreraView();
+            aniosCarreraView.ShowDialog();
+            
+        }
     }
 }

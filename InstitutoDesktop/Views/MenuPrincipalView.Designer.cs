@@ -39,6 +39,7 @@
             iconMenuItem8 = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem3 = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem4 = new FontAwesome.Sharp.IconMenuItem();
+            iconMenuItemAniosCarrera = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem9 = new FontAwesome.Sharp.IconMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -49,8 +50,8 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { iconMenuItem1, iconMenuItem2, iconMenuItem3 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(7, 2, 0, 2);
-            menuStrip1.Size = new Size(1091, 32);
+            menuStrip1.Padding = new Padding(9, 2, 0, 2);
+            menuStrip1.Size = new Size(1364, 33);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -61,17 +62,17 @@
             iconMenuItem1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem1.IconSize = 40;
             iconMenuItem1.Name = "iconMenuItem1";
-            iconMenuItem1.Size = new Size(104, 28);
+            iconMenuItem1.Size = new Size(118, 29);
             iconMenuItem1.Text = "Principal";
             // 
             // iconMenuItem2
             // 
-            iconMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { iconMenuItem7, iconMenuItem6, btnAlumnos, iconMenuItem5, iconDocente, iconMenuItem8, iconMenuItem9 });
+            iconMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { iconMenuItem7, iconMenuItem6, btnAlumnos, iconMenuItem5, iconDocente, iconMenuItemAniosCarrera, iconMenuItem9 });
             iconMenuItem2.IconChar = FontAwesome.Sharp.IconChar.Database;
             iconMenuItem2.IconColor = Color.Black;
             iconMenuItem2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem2.Name = "iconMenuItem2";
-            iconMenuItem2.Size = new Size(84, 28);
+            iconMenuItem2.Size = new Size(96, 29);
             iconMenuItem2.Text = "Bases";
             // 
             // iconMenuItem7
@@ -80,7 +81,7 @@
             iconMenuItem7.IconColor = Color.Black;
             iconMenuItem7.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem7.Name = "iconMenuItem7";
-            iconMenuItem7.Size = new Size(228, 30);
+            iconMenuItem7.Size = new Size(272, 34);
             iconMenuItem7.Text = "Horas";
             iconMenuItem7.Click += iconMenuItem7_Click;
             // 
@@ -90,7 +91,7 @@
             iconMenuItem6.IconColor = Color.Black;
             iconMenuItem6.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem6.Name = "iconMenuItem6";
-            iconMenuItem6.Size = new Size(228, 30);
+            iconMenuItem6.Size = new Size(272, 34);
             iconMenuItem6.Text = "Ciclo Lectivo";
             iconMenuItem6.Click += iconMenuItem6_Click;
             // 
@@ -100,7 +101,7 @@
             btnAlumnos.IconColor = Color.Black;
             btnAlumnos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnAlumnos.Name = "btnAlumnos";
-            btnAlumnos.Size = new Size(228, 30);
+            btnAlumnos.Size = new Size(272, 34);
             btnAlumnos.Text = "Alumnos";
             btnAlumnos.Click += btnAlumnos_Click;
             // 
@@ -120,7 +121,7 @@
             iconDocente.IconColor = Color.Pink;
             iconDocente.IconFont = FontAwesome.Sharp.IconFont.Solid;
             iconDocente.Name = "iconDocente";
-            iconDocente.Size = new Size(228, 30);
+            iconDocente.Size = new Size(272, 34);
             iconDocente.Text = "Docentes";
             iconDocente.Click += iconDocente_Click;
             // 
@@ -141,7 +142,7 @@
             iconMenuItem3.IconColor = Color.Black;
             iconMenuItem3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem3.Name = "iconMenuItem3";
-            iconMenuItem3.Size = new Size(76, 28);
+            iconMenuItem3.Size = new Size(85, 29);
             iconMenuItem3.Text = "Salir";
             // 
             // iconMenuItem4
@@ -150,9 +151,19 @@
             iconMenuItem4.IconColor = Color.Black;
             iconMenuItem4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem4.Name = "iconMenuItem4";
-            iconMenuItem4.Size = new Size(200, 26);
+            iconMenuItem4.Size = new Size(241, 34);
             iconMenuItem4.Text = "Salir del sistema";
             iconMenuItem4.Click += iconMenuItem4_Click;
+            // 
+            // iconMenuItemAniosCarrera
+            // 
+            iconMenuItemAniosCarrera.IconChar = FontAwesome.Sharp.IconChar.Neuter;
+            iconMenuItemAniosCarrera.IconColor = Color.Black;
+            iconMenuItemAniosCarrera.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconMenuItemAniosCarrera.Name = "iconMenuItemAniosCarrera";
+            iconMenuItemAniosCarrera.Size = new Size(272, 34);
+            iconMenuItemAniosCarrera.Text = "Años de las carreras";
+            iconMenuItemAniosCarrera.Click += iconMenuItemAniosCarrera_Click;
             // 
             // iconMenuItem9
             // 
@@ -166,12 +177,12 @@
             // 
             // MenuPrincipalView
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1091, 662);
+            ClientSize = new Size(1364, 828);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "MenuPrincipalView";
             Text = "Instituto Superior de Profesorado Nº20";
             WindowState = FormWindowState.Maximized;
@@ -197,6 +208,7 @@
         private FontAwesome.Sharp.IconMenuItem btnAlumnos;
 
         private FontAwesome.Sharp.IconMenuItem iconDocente;
+        private FontAwesome.Sharp.IconMenuItem iconMenuItemAniosCarrera;
         private FontAwesome.Sharp.IconMenuItem iconMenuItem8;
         private FontAwesome.Sharp.IconMenuItem iconMenuItem9;
     }

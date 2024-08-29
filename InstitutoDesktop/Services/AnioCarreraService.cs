@@ -1,4 +1,5 @@
-﻿using InstitutoDesktop.Class;
+﻿
+using InstitutoDesktop.Class;
 using InstitutoDesktop.Interfaces.Commons;
 using InstitutoDesktop.Models.Commons;
 using System;
@@ -16,14 +17,14 @@ namespace InstitutoDesktop.Services
         private readonly JsonSerializerOptions options;
         private readonly string _endpoint;
 
-        public AnioCarreraService()
+        public AnioCarreraService() 
         {
             this.client = new HttpClient();
             this.options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
             var urlApi = Properties.Settings.Default.UrlApi;
             this._endpoint = urlApi + ApiEndpoints.GetEndpoint(nameof(AnioCarrera));
         }
-
+        
         public async Task<List<AnioCarrera>?> GetByCarreraAsync(int? idCarrera)
         {
             var response = await client.GetAsync($"{_endpoint}?idCarrera={idCarrera}");
