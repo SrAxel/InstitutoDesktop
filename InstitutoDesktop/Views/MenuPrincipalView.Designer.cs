@@ -36,7 +36,6 @@
             btnAlumnos = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem5 = new FontAwesome.Sharp.IconMenuItem();
             iconDocente = new FontAwesome.Sharp.IconMenuItem();
-            iconMenuItem8 = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem3 = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem4 = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItemAniosCarrera = new FontAwesome.Sharp.IconMenuItem();
@@ -125,15 +124,7 @@
             iconDocente.Text = "Docentes";
             iconDocente.Click += iconDocente_Click;
             // 
-            // iconMenuItem8
-            // 
-            iconMenuItem8.IconChar = FontAwesome.Sharp.IconChar.CalendarWeek;
-            iconMenuItem8.IconColor = Color.Black;
-            iconMenuItem8.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconMenuItem8.Name = "iconMenuItem8";
-            iconMenuItem8.Size = new Size(228, 30);
-            iconMenuItem8.Text = "Años Carrera";
-            iconMenuItem8.Click += iconMenuItem8_Click;
+
             // 
             // iconMenuItem3
             // 
@@ -209,7 +200,7 @@
 
         private FontAwesome.Sharp.IconMenuItem iconDocente;
         private FontAwesome.Sharp.IconMenuItem iconMenuItemAniosCarrera;
-        private FontAwesome.Sharp.IconMenuItem iconMenuItem8;
+
         private FontAwesome.Sharp.IconMenuItem iconMenuItem9;
     }
 }
