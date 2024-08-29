@@ -5,6 +5,9 @@ using InstitutoDesktop.Views.Horarios;
 using InstitutoDesktop.Views.Commons.Alumnos;
 
 using InstitutoDesktop.Views.Commons;
+using InstitutoDesktop.Views.Commons.AnioCarreras;
+using InstitutoDesktop.Views.Commons.Materias;
+
 
 
 namespace InstitutoDesktop
@@ -32,7 +35,7 @@ namespace InstitutoDesktop
 
         private void iconMenuItem6_Click(object sender, EventArgs e)
         {
-            CiclosLectivosView ciclosLectivosView= new CiclosLectivosView();
+            CiclosLectivosView ciclosLectivosView = new CiclosLectivosView();
             ciclosLectivosView.ShowDialog();
         }
 
@@ -40,7 +43,7 @@ namespace InstitutoDesktop
         {
             AlumnosView alumnosView = new AlumnosView();
             alumnosView.ShowDialog();
-         }
+        }
         private void iconDocente_Click(object sender, EventArgs e)
         {
             DocentesView docentesView = new DocentesView();
@@ -52,6 +55,18 @@ namespace InstitutoDesktop
         {
             HorasView horariosView = new HorasView();
             horariosView.ShowDialog();
+        }
+
+        private void iconMenuItem8_Click(object sender, EventArgs e)
+        {
+            AnioCarreraView anioCarreraView = new AnioCarreraView();
+            anioCarreraView.ShowDialog();
+        }
+
+        private void iconMenuItem9_Click(object sender, EventArgs e)
+        {
+            MateriaView materiaView = new MateriaView();
+            materiaView.ShowDialog();
         }
     }
 }
