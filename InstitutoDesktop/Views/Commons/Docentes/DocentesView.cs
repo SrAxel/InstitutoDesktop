@@ -1,4 +1,5 @@
 ﻿using BlazorAppVSCode.Models.Commons;
+using InstitutoDesktop.ExtensionMethods;
 using InstitutoDesktop.Interfaces;
 using InstitutoDesktop.Models.Commons;
 using InstitutoDesktop.Services;
@@ -56,6 +57,7 @@ namespace InstitutoDesktop.Views.Commons
             {
                 await docenteService.DeleteAsync(docente.Id);
                 await CargarGrilla();
+                dataGridDocentes.SeleccionarFilaNuevaOEditada(docente.Id);
             }
         }
 

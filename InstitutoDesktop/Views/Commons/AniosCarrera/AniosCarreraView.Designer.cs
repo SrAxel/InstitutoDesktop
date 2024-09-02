@@ -28,96 +28,114 @@
         /// </summary>
         private void InitializeComponent()
         {
+            dataGridAniosCarrera = new DataGridView();
             cboCarreras = new ComboBox();
-            lblCarrera = new Label();
+            label1 = new Label();
             btnAgregar = new Button();
             btnEditar = new Button();
             btnEliminar = new Button();
-            dataGridAñosCarrera = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridAñosCarrera).BeginInit();
+            btnSalir = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridAniosCarrera).BeginInit();
             SuspendLayout();
+            // 
+            // dataGridAniosCarrera
+            // 
+            dataGridAniosCarrera.AllowUserToAddRows = false;
+            dataGridAniosCarrera.AllowUserToDeleteRows = false;
+            dataGridAniosCarrera.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridAniosCarrera.Location = new Point(66, 104);
+            dataGridAniosCarrera.Name = "dataGridAniosCarrera";
+            dataGridAniosCarrera.ReadOnly = true;
+            dataGridAniosCarrera.RowHeadersWidth = 62;
+            dataGridAniosCarrera.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridAniosCarrera.Size = new Size(641, 304);
+            dataGridAniosCarrera.TabIndex = 0;
             // 
             // cboCarreras
             // 
             cboCarreras.FormattingEnabled = true;
-            cboCarreras.Location = new Point(223, 43);
+            cboCarreras.Location = new Point(184, 33);
             cboCarreras.Name = "cboCarreras";
-            cboCarreras.Size = new Size(313, 28);
-            cboCarreras.TabIndex = 0;
+            cboCarreras.Size = new Size(434, 33);
+            cboCarreras.TabIndex = 1;
+            cboCarreras.SelectedIndexChanged += cboCarreras_SelectedIndexChanged;
             // 
-            // lblCarrera
+            // label1
             // 
-            lblCarrera.AutoSize = true;
-            lblCarrera.Location = new Point(150, 48);
-            lblCarrera.Name = "lblCarrera";
-            lblCarrera.Size = new Size(57, 20);
-            lblCarrera.TabIndex = 1;
-            lblCarrera.Text = "Carrera";
+            label1.AutoSize = true;
+            label1.Location = new Point(71, 36);
+            label1.Name = "label1";
+            label1.Size = new Size(72, 25);
+            label1.TabIndex = 2;
+            label1.Text = "Carrera:";
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(97, 370);
+            btnAgregar.Location = new Point(79, 443);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(94, 29);
-            btnAgregar.TabIndex = 2;
+            btnAgregar.Size = new Size(112, 34);
+            btnAgregar.TabIndex = 3;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(197, 370);
+            btnEditar.Location = new Point(211, 443);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(94, 29);
-            btnEditar.TabIndex = 3;
+            btnEditar.Size = new Size(112, 34);
+            btnEditar.TabIndex = 4;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(297, 370);
+            btnEliminar.Location = new Point(354, 443);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(94, 29);
-            btnEliminar.TabIndex = 4;
+            btnEliminar.Size = new Size(112, 34);
+            btnEliminar.TabIndex = 5;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
-            // dataGridAñosCarrera
+            // btnSalir
             // 
-            dataGridAñosCarrera.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridAñosCarrera.BackgroundColor = SystemColors.GradientActiveCaption;
-            dataGridAñosCarrera.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridAñosCarrera.Location = new Point(97, 88);
-            dataGridAñosCarrera.Name = "dataGridAñosCarrera";
-            dataGridAñosCarrera.RowHeadersWidth = 51;
-            dataGridAñosCarrera.Size = new Size(569, 262);
-            dataGridAñosCarrera.TabIndex = 5;
+            btnSalir.Location = new Point(651, 466);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(112, 34);
+            btnSalir.TabIndex = 6;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
             // 
             // AniosCarreraView
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Lavender;
-            ClientSize = new Size(800, 450);
-            Controls.Add(dataGridAñosCarrera);
+            ClientSize = new Size(801, 533);
+            Controls.Add(btnSalir);
             Controls.Add(btnEliminar);
             Controls.Add(btnEditar);
             Controls.Add(btnAgregar);
-            Controls.Add(lblCarrera);
+            Controls.Add(label1);
             Controls.Add(cboCarreras);
+            Controls.Add(dataGridAniosCarrera);
             Name = "AniosCarreraView";
-            Text = "Años de las Carreras";
-            ((System.ComponentModel.ISupportInitialize)dataGridAñosCarrera).EndInit();
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Años de las carreras";
+            ((System.ComponentModel.ISupportInitialize)dataGridAniosCarrera).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
+        private DataGridView dataGridAniosCarrera;
         private ComboBox cboCarreras;
-        private Label lblCarrera;
+        private Label label1;
         private Button btnAgregar;
         private Button btnEditar;
         private Button btnEliminar;
-        private DataGridView dataGridAñosCarrera;
+        private Button btnSalir;
     }
 }

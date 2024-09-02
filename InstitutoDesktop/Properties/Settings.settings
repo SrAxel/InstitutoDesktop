@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="UrlApi" Type="System.String" Scope="User">
-      <Value Profile="(Default)">https://inscripcionesale.azurewebsites.net/api/</Value>
+      <Value Profile="(Default)">https://datainstituto.azurewebsites.net/api/</Value>
     </Setting>
   </Settings>
 </SettingsFile>
