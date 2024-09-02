@@ -51,11 +51,22 @@ namespace InstitutoDesktop.Views.MesasExamenes
 
         private async void btnEditar_Click(object sender, EventArgs e)
         {
-            var turnoexamenes = (TurnoExamen)listaTurnos.Current;
-            AgregarEditarTurnoExamenesView agregarEditarTurnoExamenesView = new AgregarEditarTurnoExamenesView();
+
+            var turnoexamen = (TurnoExamen)listaTurnos.Current;
+            if (turnoexamen == null)
+            {
+                MessageBox.Show("Debe seleccionar un valor de la grilla");
+                return;
+            }
+            AgregarEditarTurnoExamenesView agregarEditarTurnoExamenesView = new AgregarEditarTurnoExamenesView(turnoexamen);
             agregarEditarTurnoExamenesView.ShowDialog();
             await CargarGrilla();
 
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

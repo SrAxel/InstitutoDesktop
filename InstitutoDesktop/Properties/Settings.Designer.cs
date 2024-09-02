@@ -25,7 +25,7 @@ namespace InstitutoDesktop.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://inscripcionesale.azurewebsites.net/api/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://datainstituto.azurewebsites.net/api/")]
         public string UrlApi {
             get {
                 return ((string)(this["UrlApi"]));
