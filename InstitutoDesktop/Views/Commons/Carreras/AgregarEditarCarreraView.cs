@@ -1,5 +1,5 @@
-﻿using BlazorAppVSCode.Models.Commons;
-using InstitutoDesktop.Interfaces;
+﻿using InstitutoDesktop.Interfaces;
+using InstitutoDesktop.Models.Commons;
 using InstitutoDesktop.Services;
 using System;
 using System.Collections.Generic;
@@ -16,43 +16,42 @@ namespace InstitutoDesktop.Views.Commons
     public partial class AgregarEditarCarreraView : Form
     {
         IGenericService<Carrera> carreraService = new GenericService<Carrera>();
-        private int idEditar=0;
+        private Carrera carrera;
 
+        //nuevo
         public AgregarEditarCarreraView()
         {
             InitializeComponent();
+            carrera=new Carrera();
         }
 
-        public AgregarEditarCarreraView(int idEditar)
+        //editar
+        public AgregarEditarCarreraView(Carrera carrera)
         {
             InitializeComponent();
-            this.idEditar = idEditar;
+            this.carrera = carrera;
             CargarDatosCarreraAEditar();
         }
 
         private async void CargarDatosCarreraAEditar()
         {
-            var carrera=await carreraService.GetByIdAsync(idEditar);
-            if (carrera != null)
-            {
-                txtNombre.Text = carrera.Nombre;
-                txtSigla.Text = carrera.Sigla;
-            }
+            txtNombre.Text = carrera.Nombre;
+            txtSigla.Text = carrera.Sigla;
         }
 
         private async void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (idEditar == 0)
+            carrera.Nombre = txtNombre.Text;
+            carrera.Sigla = txtSigla.Text;
+            
+            if (carrera.Id == 0)
             {
-                var carrera = new Carrera() { Nombre = txtNombre.Text, Sigla = txtSigla.Text };
                 await carreraService.AddAsync(carrera);
             }
             else
             {
-                var carrera = new Carrera() { Id=idEditar, Nombre = txtNombre.Text, Sigla = txtSigla.Text };
                 await carreraService.UpdateAsync(carrera);
             }
-
             this.Close();
         }
     }

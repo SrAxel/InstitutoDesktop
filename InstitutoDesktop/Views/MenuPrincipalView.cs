@@ -6,6 +6,10 @@ using InstitutoDesktop.Views.MesasExamenes;
 using InstitutoDesktop.Views.Commons.Alumnos;
 
 using InstitutoDesktop.Views.Commons;
+using InstitutoDesktop.Views.Commons.AnioCarreras;
+using InstitutoDesktop.Views.Commons.Materias;
+using InstitutoDesktop.Views.AniosCarrera;
+
 
 
 
@@ -56,10 +60,27 @@ namespace InstitutoDesktop
             horariosView.ShowDialog();
         }
 
+
         private void turnoExamenesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TurnoExamenesView turnoexamenesview = new TurnoExamenesView();
             turnoexamenesview.ShowDialog();
+        }
+
+
+
+        private void iconMenuItem9_Click(object sender, EventArgs e)
+        {
+            MateriaView materiaView = new MateriaView();
+            materiaView.ShowDialog();
+        }
+
+        private void iconMenuItemAniosCarrera_Click(object sender, EventArgs e)
+        {
+            AniosCarreraView aniosCarreraView = new AniosCarreraView();
+            aniosCarreraView.ShowDialog();
+            
+
         }
     }
 }

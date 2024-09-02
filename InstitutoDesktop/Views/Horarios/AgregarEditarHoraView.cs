@@ -16,46 +16,39 @@ namespace InstitutoDesktop.Views.Horarios
     public partial class AgregarEditarHoraView : Form
     {
         IGenericService<Hora> horarioService = new GenericService<Hora>();
-        private int idEditar=0;
+        private Hora hora;
 
         public AgregarEditarHoraView()
         {
             InitializeComponent();
+            hora = new Hora();
         }
 
-        public AgregarEditarHoraView(int idEditar)
+        public AgregarEditarHoraView(Hora hora)
         {
             InitializeComponent();
-            this.idEditar = idEditar;
+            this.hora = hora;
             CargarDatosEnPantalla();
         }
 
         private async void CargarDatosEnPantalla()
         {
-            var hora = await horarioService.GetByIdAsync(idEditar);
             txtNombre.Text = hora.Nombre;
             chkRecreo.Checked = hora.esRecreo;
         }
 
         private async void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (idEditar == 0)
+            hora.Nombre = txtNombre.Text;
+            hora.esRecreo = chkRecreo.Checked;
+
+            if (hora.Id == 0)
             {
-                var hora = new Hora()
-                {
-                    Nombre = txtNombre.Text,
-                    esRecreo = chkRecreo.Checked
-                };
                 await horarioService.AddAsync(hora);
+
             }
             else
             {
-                var hora = new Hora()
-                {
-                    Id = idEditar,
-                    Nombre = txtNombre.Text,
-                    esRecreo = chkRecreo.Checked
-                };
                 await horarioService.UpdateAsync(hora);
             }
            
